@@ -1,0 +1,21 @@
+<div class="element-left">
+
+  <app-resort-image [imageDetail]='resortDetail.images[0]'></app-resort-image>
+
+  <div class="element-left-bottom">
+      
+    <app-resort-menu></app-resort-menu>
+
+    <app-resort-list (changeImageEvent)="viewResortDetail($event)" [resorts]="resorts"></app-resort-list>
+
+  </div>
+
+</div>
+
+<div class="element-right">
+
+  <app-resort-weather [weather]='resortDetail.weather'></app-resort-weather>
+
+  <app-resort-info [imageMore]='resortDetail.images[1]' [follows]='resortDetail.follows'></app-resort-info>
+
+</div>
