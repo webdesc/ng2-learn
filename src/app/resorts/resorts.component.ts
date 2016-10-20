@@ -58,7 +58,7 @@ let resorts: IResort[] = [{
 }, {
   id: 4,
   name: 'Giper Resort',
-  description: 'xxx',
+  description: 'например',
   phone: '+7926836926',
   images: [
     './assets/images/b1.jpg',
