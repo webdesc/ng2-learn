@@ -11,6 +11,7 @@ import { ResortListComponent } from './resorts/resort-list/resort-list.component
 import { ResortItemComponent } from './resorts/resort-item/resort-item.component';
 import { ResortWeatherComponent } from './resorts/resort-weather/resort-weather.component';
 import { ResortInfoComponent } from './resorts/resort-info/resort-info.component';
+import { SortPipe } from './shared/pipes/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ResortInfoComponent } from './resorts/resort-info/resort-info.component
     ResortListComponent,
     ResortItemComponent,
     ResortWeatherComponent,
-    ResortInfoComponent
+    ResortInfoComponent,
+    SortPipe
   ],
   imports: [
     BrowserModule,

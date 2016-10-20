@@ -1,4 +1,4 @@
-import { Component, Output } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { IResort } from '../../app/shared/interfaces/resorts';
 
 let resorts: IResort[] = [{
@@ -20,7 +20,7 @@ let resorts: IResort[] = [{
     following: 632
   }
 }, {
-  id: 1,
+  id: 2,
   name: 'Abstract Resort',
   description: 'xxx',
   phone: '+7926836926',
@@ -38,7 +38,7 @@ let resorts: IResort[] = [{
     following: 402
   }
 }, {
-  id: 1,
+  id: 3,
   name: 'Mega Resort',
   description: 'дескрипшион',
   phone: '+7926836926',
@@ -56,7 +56,7 @@ let resorts: IResort[] = [{
     following: 407332
   }
 }, {
-  id: 1,
+  id: 4,
   name: 'Giper Resort',
   description: 'xxx',
   phone: '+7926836926',
@@ -74,7 +74,7 @@ let resorts: IResort[] = [{
     following: 402
   }
 }, {
-  id: 1,
+  id: 5,
   name: 'Puper Resort',
   description: 'xxx',
   phone: '+7926836926',
@@ -92,7 +92,7 @@ let resorts: IResort[] = [{
     following: 666
   }
 }, {
-  id: 1,
+  id: 6,
   name: 'Super Resort',
   description: 'описание например',
   phone: '+7926836926',
@@ -120,13 +120,19 @@ export class ResortComponent {
 
   public resorts:IResort[] = resorts;
   public resortDetail:IResort;
+  public sortBy:string;
 
   constructor() {
     this.resortDetail = resorts[0];
+    this.sortBy = 'id';
   }
 
   public viewResortDetail(index) {
     this.resortDetail = resorts[index];
+  }
+
+  public sortResort(field) {
+    this.sortBy = field;
   }
 
 }

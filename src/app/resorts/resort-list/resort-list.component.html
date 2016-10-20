@@ -3,8 +3,8 @@
   <span class="line"> </span>
   <div class="activity_box">
     <div class="scrollbar" id="style-2">
-
-      <app-resort-item *ngFor="let resort of resorts, let i = index" [resort]="resort" (mouseenter)="changeImageEvent.emit(i)"></app-resort-item>
+      
+      <app-resort-item *ngFor="let resort of resorts | sort: sortBy, let i = index" [resort]="resort" (mouseenter)="changeImageEvent.emit(i)"></app-resort-item>
 
     </div>
   </div>

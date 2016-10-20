@@ -4,9 +4,9 @@
 
   <div class="element-left-bottom">
       
-    <app-resort-menu></app-resort-menu>
+    <app-resort-menu [resorts]="resorts" (actionSortResort)="sortResort($event)" [sortBy]="sortBy"></app-resort-menu>
 
-    <app-resort-list (changeImageEvent)="viewResortDetail($event)" [resorts]="resorts"></app-resort-list>
+    <app-resort-list (changeImageEvent)="viewResortDetail($event)" [resorts]="resorts" [sortBy]="sortBy"></app-resort-list>
 
   </div>
 

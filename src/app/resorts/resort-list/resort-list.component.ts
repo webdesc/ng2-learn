@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter} from '@angular/core';
-import { IResort } from '../../../app/shared/interfaces/resorts';
+import { IResort } from '../../shared/interfaces/resorts';
 
 @Component({
   selector: 'app-resort-list',
@@ -8,10 +8,10 @@ import { IResort } from '../../../app/shared/interfaces/resorts';
 })
 export class ResortListComponent {
 
-  @Input()
-  public resorts:IResort[];
+  @Input() public resorts:IResort[];
+
+  @Input() public sortBy:any;
   
-  @Output()
-  public changeImageEvent:EventEmitter<IResort> = new EventEmitter();
+  @Output() public changeImageEvent:EventEmitter<IResort> = new EventEmitter();
 
 }
